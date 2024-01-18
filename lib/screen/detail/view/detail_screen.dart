@@ -23,6 +23,9 @@ class _DetailScreenState extends State<DetailScreen> {
         appBar: AppBar(
           title: Text("${model.name}"),
           centerTitle: true,
+          actions: [
+            IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border))
+          ],
         ),
         body: Padding(
           padding: const EdgeInsets.all(10),
@@ -31,15 +34,15 @@ class _DetailScreenState extends State<DetailScreen> {
             children: [
               Image.asset("assets/img/logo.png",width: MediaQuery.sizeOf(context).width,
                 height: MediaQuery.sizeOf(context).height*0.40,),
-              Text("${model.id}",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-              SizedBox(height: 10,),
-              Text("${model.description}",style: TextStyle(fontSize: 20),),
-              SizedBox(height: 10,),
-              Text("Country: ${model.country}",style: TextStyle(fontSize: 20),),
-              SizedBox(height: 10,),
-              Text("Category: ${model.category}",style: TextStyle(fontSize: 20),),
-              SizedBox(height: 10,),
-              Text("Language: ${model.language}",style: TextStyle(fontSize: 20),),
+              Text("${model.id}",style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              const SizedBox(height: 10,),
+              Text("${model.description}",style: const TextStyle(fontSize: 20),),
+              const SizedBox(height: 10,),
+              Text("Country: ${model.country}",style: const TextStyle(fontSize: 20),),
+              const SizedBox(height: 10,),
+              Text("Category: ${model.category}",style: const TextStyle(fontSize: 20),),
+              const SizedBox(height: 10,),
+              Text("Language: ${model.language}",style: const TextStyle(fontSize: 20),),
             ],
           ),
         ),
